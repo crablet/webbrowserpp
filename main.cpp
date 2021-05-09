@@ -4,6 +4,8 @@
 
 #include <iostream>
 
+#include "Include/webbrowserpp.h"
+
 int main()
 {
     std::cout << "Hello World!\n";
