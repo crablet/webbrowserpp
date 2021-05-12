@@ -5,7 +5,7 @@
 #ifndef WEBBROWSER_UNIXBROWSER_H
 #define WEBBROWSER_UNIXBROWSER_H
 
-#include "BaseBrowser.h"
+#include "Include/Browsers/BaseBrowser.h"
 
 class UnixBrowser : public BaseBrowser
 {
