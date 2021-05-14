@@ -1,5 +1,5 @@
 //
-// Created by crabletchen on 2021/9/23.
+// Created by crablet on 2021/9/23.
 //
 
 #ifndef WEBBROWSER_BASEBROWSER_H
@@ -9,7 +9,7 @@
 
 class BaseBrowser
 {
-public:
+public:c
     virtual void Open(const std::string &url, int behaviour, bool autoRaise) = 0;
     virtual void OpenNew(const std::string &url) = 0;
     virtual void OpenNewTab(const std::string &rl) = 0;
