@@ -9,7 +9,7 @@
 
 class BaseBrowser
 {
-public:c
+public:
     virtual void Open(const std::string &url, int behaviour, bool autoRaise) = 0;
     virtual void OpenNew(const std::string &url) = 0;
     virtual void OpenNewTab(const std::string &rl) = 0;

@@ -4,7 +4,7 @@
 
 #include <iostream>
 
-#include "Include/webbrowserpp.h"
+#include "Include/WebBrowser.h"
 
 int main()
 {
