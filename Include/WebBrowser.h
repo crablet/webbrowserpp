@@ -6,13 +6,23 @@
 #define WEBBROWSER_WEBBROWSER_H
 
 #include <string>
+#include <vector>
+#include <memory>
+
+#include "Browsers/BaseBrowser.h"
 
 class WebBrowser
 {
 public:
-    void Open(const std::string &url, int behaviour, bool autoRaise);
-    void OpenNew(const std::string &url);
-    void OpenNewTab(const std::string &rl);
+    bool Open(const std::string &url, int behaviour, bool autoRaise);
+    bool OpenNew(const std::string &url);
+    bool OpenNewTab(const std::string &rl);
+
+private:
+    void RegisterStandardBrowsers();
+
+private:
+    std::vector<std::unique_ptr<BaseBrowser>> tryOrder;
 };
 
 
