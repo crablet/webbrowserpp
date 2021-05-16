@@ -36,3 +36,8 @@ void WebBrowser::RegisterStandardBrowsers()
 {
 
 }
+
+void WebBrowser::Register(Browser b)
+{
+
+}

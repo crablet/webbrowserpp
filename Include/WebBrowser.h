@@ -11,6 +11,17 @@
 
 #include "Browsers/BaseBrowser.h"
 
+enum class Browser
+{
+    Firefox,
+    Chrome,
+    Chromium,
+    Safari,
+    Konqueror,
+    Opera,
+    Default
+};
+
 class WebBrowser
 {
 public:
@@ -20,6 +31,7 @@ public:
 
 private:
     void RegisterStandardBrowsers();
+    void Register(Browser b);
 
 private:
     std::vector<std::unique_ptr<BaseBrowser>> tryOrder;
