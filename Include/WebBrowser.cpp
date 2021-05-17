@@ -34,7 +34,24 @@ bool WebBrowser::OpenNewTab(const std::string &rl)
 
 void WebBrowser::RegisterStandardBrowsers()
 {
+    tryOrder.clear();
 
+#if defined(TARGET_OS_MAC) || defined(__APPLE__) || defined(__MACH__)
+    Register(Browser::Default);
+    Register(Browser::Firefox);
+    Register(Browser::Chrome);
+    Register(Browser::Safari);
+#endif
+
+#if defined(_WIN32) || defined(_WIN64) || defined(__CYGWIN__)
+    Register(Browser::Default)
+    Register(Browser::Firefox);
+    Register(Browser::Chrome);
+#else
+    Register(Browser::Default);
+    Register(Browser::Firefox);
+    Register(Browser::Chrome);
+#endif
 }
 
 void WebBrowser::Register(Browser b)
