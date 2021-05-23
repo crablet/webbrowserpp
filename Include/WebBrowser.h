@@ -19,6 +19,7 @@ enum class Browser
     Safari,
     Konqueror,
     Opera,
+    Edge,
     Default
 };
 
