@@ -23,6 +23,16 @@ enum class Browser
     Default
 };
 
+enum Platform
+{
+    Linux,
+    Windows,
+    MacOS,
+    Unix,
+    Android,
+    Other
+};
+
 class WebBrowser
 {
 public:
