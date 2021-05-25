@@ -10,28 +10,7 @@
 #include <memory>
 
 #include "Browsers/BaseBrowser.h"
-
-enum class Browser
-{
-    Firefox,
-    Chrome,
-    Chromium,
-    Safari,
-    Konqueror,
-    Opera,
-    Edge,
-    Default
-};
-
-enum Platform
-{
-    Linux,
-    Windows,
-    MacOS,
-    Unix,
-    Android,
-    Other
-};
+#include "Environment.h"
 
 class WebBrowser
 {
