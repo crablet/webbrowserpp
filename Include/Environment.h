@@ -17,7 +17,7 @@ enum class Browser
     Default
 };
 
-enum Platform
+enum class Platform
 {
     Linux,
     Windows,
