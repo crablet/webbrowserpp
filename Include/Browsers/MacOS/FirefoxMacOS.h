@@ -10,7 +10,10 @@
 
 class FirefoxMacOS : public BaseBrowser
 {
-
+public:
+    bool Open(const std::string &url, int behaviour, bool autoRaise) override;
+    bool OpenNew(const std::string &url) override;
+    bool OpenNewTab(const std::string &rl) override;
 };
 
 #endif //WEBBROWSER_FIREFOXMACOS_H

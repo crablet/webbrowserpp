@@ -4,11 +4,11 @@
 
 #include <iostream>
 
-#include "Include/WebBrowser.h"
+#include "Include/Browsers/MacOS/FirefoxMacOS.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    FirefoxMacOS().Open("https://www.google.com", 0, true);
 
     return 0;
 }
