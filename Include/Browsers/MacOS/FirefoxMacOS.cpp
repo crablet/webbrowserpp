@@ -1,7 +1,6 @@
 //
 // Created by crablet on 2021/9/28.
 //
-#if defined(TARGET_OS_MAC) || defined(__APPLE__) || defined(__MACH__)
 
 #include <cstdlib>
 
@@ -12,7 +11,7 @@ bool FirefoxMacOS::Open(const std::string &url, int behaviour, bool autoRaise)
     std::string command = R"(open -a Firefox ")";
     command += url + '"';
 
-    std::system(command);
+    std::system(command.c_str());
 
     return true;
 }
@@ -27,4 +26,3 @@ bool FirefoxMacOS::OpenNewTab(const std::string &rl)
     return false;
 }
 
-#endif

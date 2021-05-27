@@ -4,7 +4,7 @@
 
 #include "WebBrowser.h"
 
-void WebBrowser::Open(const std::string &url, int behaviour, bool autoRaise)
+bool WebBrowser::Open(const std::string &url, int behaviour, bool autoRaise)
 {
     if (tryOrder.empty())
     {
@@ -24,12 +24,12 @@ void WebBrowser::Open(const std::string &url, int behaviour, bool autoRaise)
 
 bool WebBrowser::OpenNew(const std::string &url)
 {
-    return Open(url, 1);
+    return Open(url, 1, true);
 }
 
-bool WebBrowser::OpenNewTab(const std::string &rl)
+bool WebBrowser::OpenNewTab(const std::string &url)
 {
-    return Open(url, 2);
+    return Open(url, 2, true);
 }
 
 void WebBrowser::RegisterStandardBrowsers()

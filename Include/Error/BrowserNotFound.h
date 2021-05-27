@@ -29,7 +29,7 @@ public:
     virtual ~BrowserNotFound() noexcept;
 
 private:
-    static std::string GetErrorMessage(Browser b, Platform p) const
+    static std::string GetErrorMessage(Browser b, Platform p)
     {
         std::string browserName;
         switch (b)
