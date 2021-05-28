@@ -4,7 +4,7 @@
 
 #include <iostream>
 
-#include "Include/Browsers/MacOS/FirefoxMacOS.h"
+#include "Include/Browsers/MacOS/FirefoxMacOS.hpp"
 
 int main()
 {
