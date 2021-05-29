@@ -2,8 +2,8 @@
 // Created by crablet on 2021/9/29.
 //
 
-#ifndef WEBBROWSER_OPERAMACOS_H
-#define WEBBROWSER_OPERAMACOS_H
+#ifndef WEBBROWSER_OPERAMACOS_HPP
+#define WEBBROWSER_OPERAMACOS_HPP
 
 #include "Include/Browsers/BaseBrowser.h"
 
@@ -13,4 +13,4 @@ class OperaMacOS : public BaseBrowser
 };
 
 
-#endif //WEBBROWSER_OPERAMACOS_H
+#endif //WEBBROWSER_OPERAMACOS_HPP
