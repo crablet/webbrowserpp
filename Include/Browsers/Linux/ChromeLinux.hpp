@@ -5,7 +5,7 @@
 #ifndef WEBBROWSER_CHROMELINUX_HPP
 #define WEBBROWSER_CHROMELINUX_HPP
 
-#include "Include/Browsers/BaseBrowser.h"
+#include "Include/Browsers/BaseBrowser.hpp"
 
 class ChromeLinux : public BaseBrowser
 {

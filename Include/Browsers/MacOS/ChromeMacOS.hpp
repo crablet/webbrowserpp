@@ -5,7 +5,7 @@
 #ifndef WEBBROWSER_CHROMEMACOS_HPP
 #define WEBBROWSER_CHROMEMACOS_HPP
 
-#include "Include/Browsers/BaseBrowser.h"
+#include "Include/Browsers/BaseBrowser.hpp"
 
 class ChromeMacOS : public BaseBrowser
 {

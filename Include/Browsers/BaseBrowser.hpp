@@ -2,8 +2,8 @@
 // Created by crablet on 2021/9/23.
 //
 
-#ifndef WEBBROWSER_BASEBROWSER_H
-#define WEBBROWSER_BASEBROWSER_H
+#ifndef WEBBROWSER_BASEBROWSER_HPP
+#define WEBBROWSER_BASEBROWSER_HPP
 
 #include <string>
 
@@ -18,4 +18,4 @@ public:
 };
 
 
-#endif //WEBBROWSER_BASEBROWSER_H
+#endif //WEBBROWSER_BASEBROWSER_HPP

@@ -5,7 +5,7 @@
 #ifndef WEBBROWSER_OPERAMACOS_HPP
 #define WEBBROWSER_OPERAMACOS_HPP
 
-#include "Include/Browsers/BaseBrowser.h"
+#include "Include/Browsers/BaseBrowser.hpp"
 
 class OperaMacOS : public BaseBrowser
 {

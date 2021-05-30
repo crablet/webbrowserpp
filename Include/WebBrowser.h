@@ -9,7 +9,7 @@
 #include <vector>
 #include <memory>
 
-#include "Browsers/BaseBrowser.h"
+#include "Browsers/BaseBrowser.hpp"
 #include "Environment.h"
 
 class WebBrowser

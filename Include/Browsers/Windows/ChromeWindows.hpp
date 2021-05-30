@@ -5,7 +5,7 @@
 #ifndef WEBBROWSER_CHROMEWINDOWS_HPP
 #define WEBBROWSER_CHROMEWINDOWS_HPP
 
-#include "Include/Browsers/BaseBrowser.h"
+#include "Include/Browsers/BaseBrowser.hpp"
 
 class ChromeWindows : public BaseBrowser
 {

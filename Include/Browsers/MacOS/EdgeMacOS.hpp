@@ -5,7 +5,7 @@
 #ifndef WEBBROWSER_EDGEMACOS_HPP
 #define WEBBROWSER_EDGEMACOS_HPP
 
-#include "Include/Browsers/BaseBrowser.h"
+#include "Include/Browsers/BaseBrowser.hpp"
 
 class EdgeMacOS : public BaseBrowser
 {

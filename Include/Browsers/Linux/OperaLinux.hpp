@@ -5,7 +5,7 @@
 #ifndef WEBBROWSER_OPERALINUX_HPP
 #define WEBBROWSER_OPERALINUX_HPP
 
-#include "Include/Browsers/BaseBrowser.h"
+#include "Include/Browsers/BaseBrowser.hpp"
 
 class OperaLinux : public BaseBrowser
 {

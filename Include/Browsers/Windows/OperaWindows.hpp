@@ -5,7 +5,7 @@
 #ifndef WEBBROWSER_OPERAWINDOWS_HPP
 #define WEBBROWSER_OPERAWINDOWS_HPP
 
-#include "Include/Browsers/BaseBrowser.h"
+#include "Include/Browsers/BaseBrowser.hpp"
 
 class OperaWindows : public BaseBrowser
 {
