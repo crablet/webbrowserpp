@@ -2,8 +2,8 @@
 // Created by crablet on 2021/9/28.
 //
 
-#ifndef WEBBROWSER_BROWSERNOTFOUND_H
-#define WEBBROWSER_BROWSERNOTFOUND_H
+#ifndef WEBBROWSER_BROWSERNOTFOUND_HPP
+#define WEBBROWSER_BROWSERNOTFOUND_HPP
 
 #include <stdexcept>
 #include <string>
@@ -60,4 +60,4 @@ private:
 };
 
 
-#endif //WEBBROWSER_BROWSERNOTFOUND_H
+#endif //WEBBROWSER_BROWSERNOTFOUND_HPP
