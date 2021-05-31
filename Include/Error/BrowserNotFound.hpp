@@ -8,7 +8,7 @@
 #include <stdexcept>
 #include <string>
 
-#include "Include/WebBrowser.h"
+#include "Include/WebBrowser.hpp"
 
 class BrowserNotFound : public std::logic_error
 {

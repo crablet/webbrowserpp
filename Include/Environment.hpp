@@ -2,8 +2,8 @@
 // Created by crabletchen on 2021/9/30.
 //
 
-#ifndef WEBBROWSER_ENVIRONMENT_H
-#define WEBBROWSER_ENVIRONMENT_H
+#ifndef WEBBROWSER_ENVIRONMENT_HPP
+#define WEBBROWSER_ENVIRONMENT_HPP
 
 enum class Browser
 {
@@ -27,4 +27,4 @@ enum class Platform
     Other
 };
 
-#endif //WEBBROWSER_ENVIRONMENT_H
+#endif //WEBBROWSER_ENVIRONMENT_HPP

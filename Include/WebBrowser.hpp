@@ -2,7 +2,30 @@
 // Created by crablet on 2021/9/28.
 //
 
-#include "WebBrowser.h"
+#ifndef WEBBROWSER_WEBBROWSER_HPP
+#define WEBBROWSER_WEBBROWSER_HPP
+
+#include <string>
+#include <vector>
+#include <memory>
+
+#include "Browsers/BaseBrowser.hpp"
+#include "Environment.hpp"
+
+class WebBrowser
+{
+public:
+    bool Open(const std::string &url, int behaviour, bool autoRaise);
+    bool OpenNew(const std::string &url);
+    bool OpenNewTab(const std::string &rl);
+
+private:
+    void RegisterStandardBrowsers();
+    void Register(Browser b);
+
+private:
+    std::vector<std::unique_ptr<BaseBrowser>> tryOrder;
+};
 
 bool WebBrowser::Open(const std::string &url, int behaviour, bool autoRaise)
 {
@@ -58,3 +81,5 @@ void WebBrowser::Register(Browser b)
 {
 
 }
+
+#endif //WEBBROWSER_WEBBROWSER_HPP
