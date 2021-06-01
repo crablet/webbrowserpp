@@ -11,29 +11,29 @@
 class FirefoxMacOS : public BaseBrowser
 {
 public:
-    bool Open(const std::string &url, Behaviour behaviour, bool autoRaise) override;
-    bool OpenNew(const std::string &url) override;
+    bool Open(const std::string &url, Behaviour behaviour = Behaviour::NewTab, bool autoRaise = true) override;
+    bool OpenNewWindow(const std::string &url) override;
     bool OpenNewTab(const std::string &rl) override;
 };
 
 bool FirefoxMacOS::Open(const std::string &url, Behaviour behaviour, bool autoRaise)
 {
-    std::string command = R"(open -a Firefox ")";
-    command += url + '"';
+    const std::string tabOrWindow = behaviour == Behaviour::NewTab ? "-a" : "-n -a";
+    std::string command = std::string("open ") + tabOrWindow + " Firefox " + url;
 
     std::system(command.c_str());
 
     return true;
 }
 
-bool FirefoxMacOS::OpenNew(const std::string &url)
+bool FirefoxMacOS::OpenNewWindow(const std::string &url)
 {
-    return false;
+    return Open(url, Behaviour::NewWindow);
 }
 
-bool FirefoxMacOS::OpenNewTab(const std::string &rl)
+bool FirefoxMacOS::OpenNewTab(const std::string &url)
 {
-    return false;
+    return Open(url, Behaviour::NewTab);
 }
 
 #endif //WEBBROWSER_FIREFOXMACOS_H
