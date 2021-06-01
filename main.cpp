@@ -8,7 +8,7 @@
 
 int main()
 {
-    FirefoxMacOS().Open("https://www.google.com", 0, true);
+    FirefoxMacOS().Open("https://www.google.com", Behaviour::NewTab, true);
 
     return 0;
 }

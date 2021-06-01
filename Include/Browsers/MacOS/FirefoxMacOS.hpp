@@ -11,12 +11,12 @@
 class FirefoxMacOS : public BaseBrowser
 {
 public:
-    bool Open(const std::string &url, int behaviour, bool autoRaise) override;
+    bool Open(const std::string &url, Behaviour behaviour, bool autoRaise) override;
     bool OpenNew(const std::string &url) override;
     bool OpenNewTab(const std::string &rl) override;
 };
 
-bool FirefoxMacOS::Open(const std::string &url, int behaviour, bool autoRaise)
+bool FirefoxMacOS::Open(const std::string &url, Behaviour behaviour, bool autoRaise)
 {
     std::string command = R"(open -a Firefox ")";
     command += url + '"';

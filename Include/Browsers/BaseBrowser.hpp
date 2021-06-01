@@ -7,10 +7,12 @@
 
 #include <string>
 
+#include "Include/Control.hpp"
+
 class BaseBrowser
 {
 public:
-    virtual bool Open(const std::string &url, int behaviour, bool autoRaise) = 0;
+    virtual bool Open(const std::string &url, Behaviour behaviour, bool autoRaise) = 0;
     virtual bool OpenNew(const std::string &url) = 0;
     virtual bool OpenNewTab(const std::string &rl) = 0;
 
