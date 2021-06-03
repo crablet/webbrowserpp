@@ -3,12 +3,12 @@
 //
 
 #include "Include/Browsers/MacOS/FirefoxMacOS.hpp"
-#include "Include/Browsers/MacOS/EdgeMacOS.hpp"
+#include "Include/Browsers/MacOS/OperaMacOS.hpp"
 
 int main()
 {
     FirefoxMacOS().Open("https://www.tencent.com");
-    EdgeMacOS().Open("https://www.tencent.com");
+    OperaMacOS().Open("https://www.tencent.com");
 
     return 0;
 }
