@@ -19,6 +19,8 @@ public:
     bool OpenNew(const std::string &url);
     bool OpenNewTab(const std::string &rl);
 
+    static std::unique_ptr<BaseBrowser> Get(Browser b);
+
 private:
     void RegisterStandardBrowsers();
     void Register(Browser b);
@@ -79,7 +81,22 @@ void WebBrowser::RegisterStandardBrowsers()
 
 void WebBrowser::Register(Browser b)
 {
+    tryOrder.push_back(Get(b));
+}
 
+std::unique_ptr<BaseBrowser> WebBrowser::Get(Browser b)
+{
+    switch (b)
+    {
+        case Browser::Firefox: return std::make_unique<Firefox>();
+        case Browser::Chrome: return std::make_unique<Chrome>();
+        case Browser::Safari: return  std::make_unique<Safari>();
+        case Browser::Chromium: return nullptr;
+        case Browser::Konqueror: return nullptr;
+        case Browser::Opera: return std::make_unique<Opera>();
+        case Browser::Edge: return std::make_unique<Edge>();
+        case Browser::Default: return nullptr;
+    }
 }
 
 #endif //WEBBROWSER_WEBBROWSER_HPP
