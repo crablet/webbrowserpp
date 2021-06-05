@@ -15,7 +15,7 @@
 class WebBrowser
 {
 public:
-    bool Open(const std::string &url, int behaviour, bool autoRaise);
+    bool Open(const std::string &url, Behaviour behaviour = Behaviour::NewTab, bool autoRaise = true);
     bool OpenNew(const std::string &url);
     bool OpenNewTab(const std::string &rl);
 
@@ -29,7 +29,7 @@ private:
     std::vector<std::unique_ptr<BaseBrowser>> tryOrder;
 };
 
-bool WebBrowser::Open(const std::string &url, int behaviour, bool autoRaise)
+bool WebBrowser::Open(const std::string &url, Behaviour behaviour, bool autoRaise)
 {
     if (tryOrder.empty())
     {
@@ -38,7 +38,7 @@ bool WebBrowser::Open(const std::string &url, int behaviour, bool autoRaise)
 
     for (const auto &browser : tryOrder)
     {
-        if (browser->Open(url, behaviour, autoRaise))
+        if (browser && browser->Open(url, behaviour, autoRaise))
         {
             return true;
         }
@@ -49,12 +49,12 @@ bool WebBrowser::Open(const std::string &url, int behaviour, bool autoRaise)
 
 bool WebBrowser::OpenNew(const std::string &url)
 {
-    return Open(url, 1, true);
+    return Open(url, Behaviour::NewWindow, true);
 }
 
 bool WebBrowser::OpenNewTab(const std::string &url)
 {
-    return Open(url, 2, true);
+    return Open(url, Behaviour::NewTab, true);
 }
 
 void WebBrowser::RegisterStandardBrowsers()

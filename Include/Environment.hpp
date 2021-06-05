@@ -38,6 +38,6 @@ enum class Platform
     using Edge = EdgeMacOS;
 #include "Include/Browsers/MacOS/SafariMacOS.hpp"
     using Safari = SafariMacOS;
-#elif
+#endif
 
 #endif //WEBBROWSER_ENVIRONMENT_HPP
