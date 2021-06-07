@@ -95,7 +95,7 @@ std::unique_ptr<BaseBrowser> WebBrowser::Get(Browser b)
         case Browser::Konqueror: return nullptr;
         case Browser::Opera: return std::make_unique<Opera>();
         case Browser::Edge: return std::make_unique<Edge>();
-        case Browser::Default: return nullptr;
+        case Browser::Default: return std::make_unique<Default>();
     }
 }
 
