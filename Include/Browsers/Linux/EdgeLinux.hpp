@@ -5,7 +5,7 @@
 #ifndef WEBBROWSER_EDGELINUX_HPP
 #define WEBBROWSER_EDGELINUX_HPP
 
-#include "Include/Browsers/BaseBrowser.hpp"
+#include "Browsers/BaseBrowser.hpp"
 
 class EdgeLinux : public BaseBrowser
 {

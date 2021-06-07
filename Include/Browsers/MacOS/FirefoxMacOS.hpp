@@ -6,7 +6,7 @@
 #ifndef WEBBROWSER_FIREFOXMACOS_H
 #define WEBBROWSER_FIREFOXMACOS_H
 
-#include "Include/Browsers/BaseBrowser.hpp"
+#include "Browsers/BaseBrowser.hpp"
 
 class FirefoxMacOS : public BaseBrowser
 {

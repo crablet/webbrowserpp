@@ -5,7 +5,7 @@
 #ifndef WEBBROWSER_FIREFOXLINUX_HPP
 #define WEBBROWSER_FIREFOXLINUX_HPP
 
-#include "Include/Browsers/BaseBrowser.hpp"
+#include "Browsers/BaseBrowser.hpp"
 
 class FirefoxLinux : public BaseBrowser
 {

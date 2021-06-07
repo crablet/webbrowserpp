@@ -5,7 +5,7 @@
 #ifndef WEBBROWSER_EDGEWINDOWS_HPP
 #define WEBBROWSER_EDGEWINDOWS_HPP
 
-#include "Include/Browsers/BaseBrowser.hpp"
+#include "Browsers/BaseBrowser.hpp"
 
 class EdgeWindows : public BaseBrowser
 {

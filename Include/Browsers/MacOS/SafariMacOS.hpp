@@ -6,7 +6,7 @@
 #ifndef WEBBROWSER_SAFARIMACOS_HPP
 #define WEBBROWSER_SAFARIMACOS_HPP
 
-#include "Include/Browsers/BaseBrowser.hpp"
+#include "Browsers/BaseBrowser.hpp"
 
 class SafariMacOS : public BaseBrowser
 {
