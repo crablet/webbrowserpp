@@ -66,9 +66,7 @@ void WebBrowser::RegisterStandardBrowsers()
     Register(Browser::Firefox);
     Register(Browser::Chrome);
     Register(Browser::Safari);
-#endif
-
-#if defined(_WIN32) || defined(_WIN64) || defined(__CYGWIN__)
+#elif defined(_WIN32) || defined(_WIN64) || defined(__CYGWIN__)
     Register(Browser::Default)
     Register(Browser::Firefox);
     Register(Browser::Chrome);
