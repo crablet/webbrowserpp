@@ -19,9 +19,7 @@ bool ChromeMacOS::OpenImpl(const std::string &url, Behaviour behaviour, bool aut
     const std::string tabOrWindow = behaviour == Behaviour::NewTab ? "-a" : "-n -a";
     const std::string command = std::string("open ") + tabOrWindow + R"( "Google Chrome" )" + url;
 
-    std::system(command.c_str());
-
-    return true;
+    return std::system(command.c_str()) == 0;
 }
 
 

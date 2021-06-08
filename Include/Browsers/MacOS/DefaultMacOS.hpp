@@ -19,9 +19,7 @@ bool DefaultMacOS::OpenImpl(const std::string &url, Behaviour behaviour, bool au
     const std::string tabOrWindow = behaviour == Behaviour::NewTab ? "" : " -n ";
     const std::string command = std::string("open ") + tabOrWindow + url;
 
-    std::system(command.c_str());
-
-    return true;
+    return std::system(command.c_str()) == 0;
 }
 
 #endif //WEBBROWSER_DEFAULTMACOS_HPP
