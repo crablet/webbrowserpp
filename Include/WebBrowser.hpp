@@ -16,7 +16,7 @@ class WebBrowser
 {
 public:
     bool Open(const std::string &url, Behaviour behaviour = Behaviour::NewTab, bool autoRaise = true);
-    bool OpenNew(const std::string &url);
+    bool OpenNewWindow(const std::string &url);
     bool OpenNewTab(const std::string &rl);
 
     static std::unique_ptr<BaseBrowser> Get(Browser b);
@@ -47,7 +47,7 @@ bool WebBrowser::Open(const std::string &url, Behaviour behaviour, bool autoRais
     return false;
 }
 
-bool WebBrowser::OpenNew(const std::string &url)
+bool WebBrowser::OpenNewWindow(const std::string &url)
 {
     return Open(url, Behaviour::NewWindow, true);
 }
