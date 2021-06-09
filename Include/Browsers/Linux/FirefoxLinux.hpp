@@ -1,6 +1,7 @@
 //
 // Created by crablet on 2021/9/29.
 //
+#if defined(__linux__) || defined(linux) || defined(__linux)
 
 #ifndef WEBBROWSER_FIREFOXLINUX_HPP
 #define WEBBROWSER_FIREFOXLINUX_HPP
@@ -9,8 +10,16 @@
 
 class FirefoxLinux : public BaseBrowser
 {
-
+protected:
+    bool OpenImpl(const std::string &url, Behaviour behaviour, bool autoRaise) override;
 };
+
+bool FirefoxLinux::OpenImpl(const std::string &url, Behaviour behaviour, bool autoRaise)
+{
+    return false;
+}
 
 
 #endif //WEBBROWSER_FIREFOXLINUX_HPP
+
+#endif
