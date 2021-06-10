@@ -40,6 +40,15 @@ enum class Platform
     using Safari = SafariMacOS;
 #include "Browsers/MacOS/DefaultMacOS.hpp"
     using Default = DefaultMacOS;
+#elif defined(__linux__) || defined(linux) || defined(__linux)
+#include "Browsers/Linux/FirefoxLinux.hpp"
+    using Firefox = FirefoxLinux;
+#include "Browsers/Linux/ChromeLinux.hpp"
+    using Chrome = ChromeLinux;
+#include "Browsers/Linux/OperaLinux.hpp"
+    using Opera = OperaLinux;
+#include "Browsers/Linux/EdgeLinux.hpp"
+    using Edge = EdgeLinux;
 #endif
-
+    
 #endif //WEBBROWSER_ENVIRONMENT_HPP
