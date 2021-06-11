@@ -29,26 +29,26 @@ enum class Platform
 
 #if defined(TARGET_OS_MAC) || defined(__APPLE__) || defined(__MACH__)
 #include "Browsers/MacOS/FirefoxMacOS.hpp"
-#define Firefox FirefoxMacOS
+    using Firefox = FirefoxMacOS;
 #include "Browsers/MacOS/ChromeMacOS.hpp"
-#define Chrome ChromeMacOS
+    using Chrome = ChromeMacOS;
 #include "Browsers/MacOS/OperaMacOS.hpp"
-#define Opera OperaMacOS
+    using Opera = OperaMacOS;
 #include "Browsers/MacOS/EdgeMacOS.hpp"
-#define Edge EdgeMacOS
+    using Edge = EdgeMacOS;
 #include "Browsers/MacOS/SafariMacOS.hpp"
-#define Safari SafariMacOS
+    using Safari = SafariMacOS;
 #include "Browsers/MacOS/DefaultMacOS.hpp"
-#define Default DefaultMacOS
+    using Default = DefaultMacOS;
 #elif defined(__linux__) || defined(linux) || defined(__linux)
 #include "Browsers/Linux/FirefoxLinux.hpp"
-#define Firefox FirefoxLinux
+    using Firefox = FirefoxLinux;
 #include "Browsers/Linux/ChromeLinux.hpp"
-#define Chrome ChromeLinux
+    using Chrome = ChromeLinux;
 #include "Browsers/Linux/OperaLinux.hpp"
-#define Opera OperaLinux
+    using Opera = OperaLinux;
 #include "Browsers/Linux/EdgeLinux.hpp"
-#define Edge EdgeLinux
+    using Edge = EdgeLinux;
 #endif
 
 #endif //WEBBROWSER_ENVIRONMENT_HPP
