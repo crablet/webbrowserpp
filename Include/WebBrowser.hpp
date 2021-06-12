@@ -86,6 +86,7 @@ std::unique_ptr<BaseBrowser> WebBrowser::Get(Browser b)
 {
     switch (b)
     {
+#if defined(TARGET_OS_MAC) || defined(__APPLE__) || defined(__MACH__)
         case Browser::Firefox: return std::make_unique<Firefox>();
         case Browser::Chrome: return std::make_unique<Chrome>();
         case Browser::Safari: return  std::make_unique<Safari>();
@@ -94,6 +95,16 @@ std::unique_ptr<BaseBrowser> WebBrowser::Get(Browser b)
         case Browser::Opera: return std::make_unique<Opera>();
         case Browser::Edge: return std::make_unique<Edge>();
         case Browser::Default: return std::make_unique<Default>();
+#elif defined(__linux__) || defined(linux) || defined(__linux)
+        case Browser::Firefox: return std::make_unique<Firefox>();
+        case Browser::Chrome: return nullptr;
+        case Browser::Safari: return nullptr;
+        case Browser::Chromium: return nullptr;
+        case Browser::Konqueror: return nullptr;
+        case Browser::Opera: return nullptr;
+        case Browser::Edge: return nullptr;
+        case Browser::Default: return nullptr;
+#endif
     }
 }
 
