@@ -17,7 +17,7 @@ protected:
 bool FirefoxLinux::OpenImpl(const std::string &url, Behaviour behaviour, bool autoRaise)
 {
     const std::string tabOrWindow = behaviour == Behaviour::NewTab ? "-new-tab " : "-new-window ";
-    const std::string command = std::string("firefox ") + tabOrWindow + url;
+    const std::string command = std::string("firefox ") + tabOrWindow + url + '&';
 
     return std::system(command.c_str()) == 0;
 }
