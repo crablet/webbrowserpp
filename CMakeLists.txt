@@ -6,5 +6,5 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories(Include)
 
-add_executable(WebBrowserPP main.cpp Include/Browsers/Linux/Utils.hpp)
+add_executable(WebBrowserPP main.cpp Include/Browsers/Linux/Utils.hpp Include/Browsers/Linux/KonquerorLinux.hpp)
 
