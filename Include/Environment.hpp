@@ -49,6 +49,8 @@ enum class Platform
     using Opera = OperaLinux;
 #include "Browsers/Linux/EdgeLinux.hpp"
     using Edge = EdgeLinux;
+#include "Browsers/Linux/KonquerorLinux.hpp"
+    using Konqueror = KonquerorLinux;
 #endif
 
 #endif //WEBBROWSER_ENVIRONMENT_HPP
