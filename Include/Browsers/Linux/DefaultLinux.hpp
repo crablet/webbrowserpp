@@ -59,8 +59,26 @@ bool DefaultLinux::OpenImpl(const std::string &url, Behaviour behaviour, bool au
         }
         else
         {
-            // todo: all default web browser candidates are unknown, use "xdg-open" instead
-            return false;
+            if (access("xdg-open", F_OK) == 0)
+            {
+                return std::system(std::string("xdg-open ") + url);
+            }
+            else if (access("gvfs-open", F_OK) == 0)
+            {
+                return std::system(std::string("gvfs-open ") + url);
+            }
+            else if (access("gnome-open", F_OK) == 0)
+            {
+                return std::system(std::string("gnome-open ") + url);
+            }
+            else if (access("x-www-browser", F_OK) == 0)
+            {
+                return std::system(std::string("x-www-browser ") + url);
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
