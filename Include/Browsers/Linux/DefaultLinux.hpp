@@ -6,6 +6,17 @@
 #ifndef WEBBROWSER_DEFAULTLINUX_HPP
 #define WEBBROWSER_DEFAULTLINUX_HPP
 
+#include <cstdio>
+
+#include "unistd.h"
+
+#include "Browsers/BaseBrowser.hpp"
+#include "FirefoxLinux.hpp"
+#include "ChromeLinux.hpp"
+#include "EdgeLinux.hpp"
+#include "KonquerorLinux.hpp"
+#include "OperaLinux.hpp"
+
 class DefaultLinux : public BaseBrowser
 {
 protected:
@@ -14,6 +25,44 @@ protected:
 
 bool DefaultLinux::OpenImpl(const std::string &url, Behaviour behaviour, bool autoRaise)
 {
+    auto *ptr = popen("xdg-settings get default-web-browser", "r");
+    if (ptr == nullptr)
+    {
+        return false;
+    }
+    else
+    {
+        char buffer[32] = { 0 };
+        std::fgets(buffer, sizeof(buffer), ptr);
+        pclose(ptr);
+
+        std::string systemPreferredBrowser = buffer;
+        if (systemPreferredBrowser.find("firefox") != std::string::npos)
+        {
+            return FirefoxLinux().Open(url, behaviour, autoRaise);
+        }
+        else if (systemPreferredBrowser.find("chrome") != std::string::npos)
+        {
+            return ChromeLinux().Open(url, behaviour, autoRaise);
+        }
+        else if (systemPreferredBrowser.find("edge") != std::string::npos)
+        {
+            return EdgeLinux().Open(url, behaviour, autoRaise);
+        }
+        else if (systemPreferredBrowser.find("konqueror") != std::string::npos)
+        {
+            return KonquerorLinux().Open(url, behaviour, autoRaise);
+        }
+        else if (systemPreferredBrowser.find("opera") != std::string::npos)
+        {
+            return OperaLinux().Open(url, behaviour, autoRaise);
+        }
+        else
+        {
+            // todo: all default web browser candidates are unknown, use "xdg-open" instead
+            return false;
+        }
+    }
 }
 
 #endif //WEBBROWSER_DEFAULTLINUX_HPP
