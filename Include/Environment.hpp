@@ -51,6 +51,8 @@ enum class Platform
     using Edge = EdgeLinux;
 #include "Browsers/Linux/KonquerorLinux.hpp"
     using Konqueror = KonquerorLinux;
+#include "Browsers/Linux/DefaultLinux.hpp"
+    using Default = DefaultLinux;
 #endif
 
 #endif //WEBBROWSER_ENVIRONMENT_HPP

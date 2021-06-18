@@ -61,19 +61,23 @@ bool DefaultLinux::OpenImpl(const std::string &url, Behaviour behaviour, bool au
         {
             if (access("xdg-open", F_OK) == 0)
             {
-                return std::system(std::string("xdg-open ") + url);
+                const auto command = std::string("xdg-open ") + url;
+                return std::system(command.c_str());
             }
             else if (access("gvfs-open", F_OK) == 0)
             {
-                return std::system(std::string("gvfs-open ") + url);
+                const auto command = std::string("gvfs-open ") + url;
+                return std::system(command.c_str());
             }
-            else if (access("gnome-open", F_OK) == 0)
+            else if (access("gvfs-open", F_OK) == 0)
             {
-                return std::system(std::string("gnome-open ") + url);
+                const auto command = std::string("gvfs-open ") + url;
+                return std::system(command.c_str());
             }
             else if (access("x-www-browser", F_OK) == 0)
             {
-                return std::system(std::string("x-www-browser ") + url);
+                const auto command = std::string("x-www-browser ") + url;
+                return std::system(command.c_str());
             }
             else
             {
