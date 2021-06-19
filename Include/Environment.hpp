@@ -53,6 +53,15 @@ enum class Platform
     using Konqueror = KonquerorLinux;
 #include "Browsers/Linux/DefaultLinux.hpp"
     using Default = DefaultLinux;
+#elif defined(_WIN32) || defined(_WIN64) || defined(__CYGWIN__)
+#include "Browsers/Windows/FirefoxWindows.hpp"
+    using Firefox = FirefoxWindows;
+#include "Browsers/Windows/ChromeWindows.hpp"
+    using Chrome = ChromeWindows;
+#include "Browsers/Windows/EdgeWindows.hpp"
+    using Edge = EdgeWindows;
+#include "Browsers/Windows/OperaWindows.hpp"
+    using Opera = OperaWindows;
 #endif
 
 #endif //WEBBROWSER_ENVIRONMENT_HPP
