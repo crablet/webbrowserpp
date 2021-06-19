@@ -67,7 +67,7 @@ void WebBrowser::RegisterStandardBrowsers()
     Register(Browser::Chrome);
     Register(Browser::Safari);
 #elif defined(_WIN32) || defined(_WIN64) || defined(__CYGWIN__)
-    Register(Browser::Default)
+    Register(Browser::Default);
     Register(Browser::Firefox);
     Register(Browser::Chrome);
 #else
@@ -104,6 +104,8 @@ std::unique_ptr<BaseBrowser> WebBrowser::Get(Browser b)
         case Browser::Opera: return std::make_unique<Opera>();
         case Browser::Edge: return std::make_unique<Edge>();
         case Browser::Default: return std::make_unique<Default>();
+#elif defined(_WIN32) || defined(_WIN64) || defined(__CYGWIN__)
+        return nullptr;
 #endif
     }
 }

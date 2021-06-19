@@ -12,3 +12,6 @@ _deps
 
 .idea
 cmake-build-debug
+
+.vs
+out
