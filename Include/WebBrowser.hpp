@@ -105,7 +105,14 @@ std::unique_ptr<BaseBrowser> WebBrowser::Get(Browser b)
         case Browser::Edge: return std::make_unique<Edge>();
         case Browser::Default: return std::make_unique<Default>();
 #elif defined(_WIN32) || defined(_WIN64) || defined(__CYGWIN__)
-        return nullptr;
+        case Browser::Firefox: return nullptr;
+        case Browser::Chrome: return nullptr;
+        case Browser::Safari: return nullptr;
+        case Browser::Chromium: return nullptr;
+        case Browser::Konqueror: return nullptr;
+        case Browser::Opera: return nullptr;
+        case Browser::Edge: return nullptr;
+        case Browser::Default: return nullptr;
 #endif
     }
 }
