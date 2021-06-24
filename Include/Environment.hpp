@@ -62,6 +62,8 @@ enum class Platform
     using Edge = EdgeWindows;
 #include "Browsers/Windows/OperaWindows.hpp"
     using Opera = OperaWindows;
+#include "Browsers/Windows/DefaultWindows.hpp"
+    using Default = DefaultWindows;
 #endif
 
 #endif //WEBBROWSER_ENVIRONMENT_HPP
