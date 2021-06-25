@@ -24,8 +24,10 @@ protected:
 
 bool DefaultWindows::OpenImpl(const std::string& url, Behaviour behaviour, bool autoRaise)
 {
+    constexpr const char *defaultBrowserRegKey = R"(SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.html\UserChoice)";
+
     DWORD dataSize{};
-    if (RegGetValue(HKEY_CURRENT_USER, R"(SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.html\UserChoice)", R"(ProgID)", RRF_RT_REG_SZ, nullptr, nullptr, &dataSize) 
+    if (RegGetValue(HKEY_CURRENT_USER, defaultBrowserRegKey, R"(ProgID)", RRF_RT_REG_SZ, nullptr, nullptr, &dataSize)
         != ERROR_SUCCESS)
     {
         return false;
@@ -33,7 +35,7 @@ bool DefaultWindows::OpenImpl(const std::string& url, Behaviour behaviour, bool 
 
     std::string data;
     data.resize(dataSize);
-    if (RegGetValue(HKEY_CURRENT_USER, R"(SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.html\UserChoice)", R"(ProgID)", RRF_RT_REG_SZ, nullptr, &data[0], &dataSize)
+    if (RegGetValue(HKEY_CURRENT_USER, defaultBrowserRegKey, R"(ProgID)", RRF_RT_REG_SZ, nullptr, &data[0], &dataSize)
         != ERROR_SUCCESS)
     {
         return false;
