@@ -1,4 +1,4 @@
-//
+﻿//
 // Created by crabletchen on 2021/10/3.
 //
 #if defined(TARGET_OS_MAC) || defined(__APPLE__) || defined(__MACH__)
