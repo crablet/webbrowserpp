@@ -22,6 +22,7 @@ int main()
 ## 支持情况
 
 |       |Firefox|Chrome|Edge|Opera|Konqueror|Safari|IE|
+|:-----:|:-----:|:----:|:--:|:---:|:-------:|:----:|::|
 |Linux  |√      |√     |√   |√    |√        |○     |○ |
 |Windows|√      |√     |√   |√    |○        |○     |× |
 |MacOS  |√      |√     |√   |√    |○        |√     |○ |
