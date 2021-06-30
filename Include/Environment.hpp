@@ -14,6 +14,7 @@ enum class Browser
     Konqueror,
     Opera,
     Edge,
+    IE,
     Default
 };
 
@@ -64,6 +65,8 @@ enum class Platform
     using Opera = OperaWindows;
 #include "Browsers/Windows/DefaultWindows.hpp"
     using Default = DefaultWindows;
+#include "Browsers/Windows/IEWindows.hpp"
+    using IE = IEWindows;
 #endif
 
 #endif //WEBBROWSER_ENVIRONMENT_HPP
