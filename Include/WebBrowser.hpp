@@ -75,13 +75,18 @@ void WebBrowser::RegisterStandardBrowsers()
     Register(Browser::Edge);
     Register(Browser::Opera);
     Register(Browser::IE);
-#else
+#elif defined(__linux__) || defined(linux) || defined(__linux)
     Register(Browser::Default);
     Register(Browser::Firefox);
     Register(Browser::Chrome);
     Register(Browser::Opera);
     Register(Browser::Konqueror);
     Register(Browser::Edge);
+#else
+    Register(Browser::Default);
+    Register(Browser::Firefox);
+    Register(Browser::Chrome);
+    Register(Browser::Opera);
 #endif
 }
 
