@@ -61,7 +61,14 @@ void WebBrowser::RegisterStandardBrowsers()
 {
     tryOrder.clear();
 
-#if defined(TARGET_OS_MAC) || defined(__APPLE__) || defined(__MACH__)
+#if defined(__linux__) || defined(linux) || defined(__linux)
+    Register(Browser::Default);
+    Register(Browser::Firefox);
+    Register(Browser::Chrome);
+    Register(Browser::Opera);
+    Register(Browser::Konqueror);
+    Register(Browser::Edge);
+#elif defined(TARGET_OS_MAC) || defined(__APPLE__) || defined(__MACH__)
     Register(Browser::Default);
     Register(Browser::Firefox);
     Register(Browser::Chrome);
@@ -75,13 +82,6 @@ void WebBrowser::RegisterStandardBrowsers()
     Register(Browser::Edge);
     Register(Browser::Opera);
     Register(Browser::IE);
-#elif defined(__linux__) || defined(linux) || defined(__linux)
-    Register(Browser::Default);
-    Register(Browser::Firefox);
-    Register(Browser::Chrome);
-    Register(Browser::Opera);
-    Register(Browser::Konqueror);
-    Register(Browser::Edge);
 #else
     Register(Browser::Default);
     Register(Browser::Firefox);
