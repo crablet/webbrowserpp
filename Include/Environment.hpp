@@ -28,20 +28,7 @@ enum class Platform
     Other
 };
 
-#if defined(TARGET_OS_MAC) || defined(__APPLE__) || defined(__MACH__)
-#include "Browsers/MacOS/FirefoxMacOS.hpp"
-    using Firefox = FirefoxMacOS;
-#include "Browsers/MacOS/ChromeMacOS.hpp"
-    using Chrome = ChromeMacOS;
-#include "Browsers/MacOS/OperaMacOS.hpp"
-    using Opera = OperaMacOS;
-#include "Browsers/MacOS/EdgeMacOS.hpp"
-    using Edge = EdgeMacOS;
-#include "Browsers/MacOS/SafariMacOS.hpp"
-    using Safari = SafariMacOS;
-#include "Browsers/MacOS/DefaultMacOS.hpp"
-    using Default = DefaultMacOS;
-#elif defined(__linux__) || defined(linux) || defined(__linux)
+#if defined(__linux__) || defined(linux) || defined(__linux)
 #include "Browsers/Linux/FirefoxLinux.hpp"
     using Firefox = FirefoxLinux;
 #include "Browsers/Linux/ChromeLinux.hpp"
@@ -54,6 +41,19 @@ enum class Platform
     using Konqueror = KonquerorLinux;
 #include "Browsers/Linux/DefaultLinux.hpp"
     using Default = DefaultLinux;
+#elif defined(TARGET_OS_MAC) || defined(__APPLE__) || defined(__MACH__)
+#include "Browsers/MacOS/FirefoxMacOS.hpp"
+    using Firefox = FirefoxMacOS;
+#include "Browsers/MacOS/ChromeMacOS.hpp"
+    using Chrome = ChromeMacOS;
+#include "Browsers/MacOS/OperaMacOS.hpp"
+    using Opera = OperaMacOS;
+#include "Browsers/MacOS/EdgeMacOS.hpp"
+    using Edge = EdgeMacOS;
+#include "Browsers/MacOS/SafariMacOS.hpp"
+    using Safari = SafariMacOS;
+#include "Browsers/MacOS/DefaultMacOS.hpp"
+    using Default = DefaultMacOS;
 #elif defined(_WIN32) || defined(_WIN64) || defined(__CYGWIN__)
 #include "Browsers/Windows/FirefoxWindows.hpp"
     using Firefox = FirefoxWindows;
