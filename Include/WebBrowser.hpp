@@ -107,6 +107,7 @@ std::unique_ptr<BaseBrowser> WebBrowser::Get(Browser b)
         case Browser::Konqueror: return nullptr;
         case Browser::Opera: return std::make_unique<Opera>();
         case Browser::Edge: return std::make_unique<Edge>();
+        case Browser::IE: return nullptr;
         case Browser::Default: return std::make_unique<Default>();
 #elif defined(__linux__) || defined(linux) || defined(__linux)
         case Browser::Firefox: return std::make_unique<Firefox>();
@@ -116,6 +117,7 @@ std::unique_ptr<BaseBrowser> WebBrowser::Get(Browser b)
         case Browser::Konqueror: return std::make_unique<Konqueror>();
         case Browser::Opera: return std::make_unique<Opera>();
         case Browser::Edge: return std::make_unique<Edge>();
+        case Browser::IE: return nullptr;
         case Browser::Default: return std::make_unique<Default>();
 #elif defined(_WIN32) || defined(_WIN64) || defined(__CYGWIN__)
         case Browser::Firefox: return std::make_unique<Firefox>();
@@ -125,6 +127,7 @@ std::unique_ptr<BaseBrowser> WebBrowser::Get(Browser b)
         case Browser::Konqueror: return nullptr;
         case Browser::Opera: return std::make_unique<Opera>();
         case Browser::Edge: return std::make_unique<Edge>();
+        case Browser::IE: return std::make_unique<IE>();
         case Browser::Default: return std::make_unique<Default>();
 #endif
     }
