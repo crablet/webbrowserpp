@@ -1,6 +1,6 @@
-﻿# WebBrowser++  
+# WebBrowser++
 
-简体中文 | [English](./README-EN.md)
+[简体中文](./README.md) | English
 
 这是一个基于C++17的唯头文件跨平台浏览器控制库。  
 您只需要将本目录下的Include文件夹拷贝至您的项目中即可使用。如果使用CMake编译，则可直接`include_directories(Include)`，也可以模仿本项目的CMakeLists.txt进行编写。  
