@@ -46,6 +46,8 @@ enum class Platform
     using Firefox = FirefoxMacOS;
 #include "Browsers/MacOS/ChromeMacOS.hpp"
     using Chrome = ChromeMacOS;
+#include "Browsers/MacOS/ChromiumMacOS.h"
+    using Chromium = ChromiumMacOS;
 #include "Browsers/MacOS/OperaMacOS.hpp"
     using Opera = OperaMacOS;
 #include "Browsers/MacOS/EdgeMacOS.hpp"

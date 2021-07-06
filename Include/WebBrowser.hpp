@@ -72,6 +72,7 @@ void WebBrowser::RegisterStandardBrowsers()
     Register(Browser::Default);
     Register(Browser::Firefox);
     Register(Browser::Chrome);
+    Register(Browser::Chromium);
     Register(Browser::Safari);
     Register(Browser::Opera);
     Register(Browser::Edge);
@@ -103,7 +104,7 @@ std::unique_ptr<BaseBrowser> WebBrowser::Get(Browser b)
         case Browser::Firefox: return std::make_unique<Firefox>();
         case Browser::Chrome: return std::make_unique<Chrome>();
         case Browser::Safari: return  std::make_unique<Safari>();
-        case Browser::Chromium: return nullptr;
+        case Browser::Chromium: return std::make_unique<Chromium>();
         case Browser::Konqueror: return nullptr;
         case Browser::Opera: return std::make_unique<Opera>();
         case Browser::Edge: return std::make_unique<Edge>();
