@@ -6,7 +6,7 @@
 您只需要将本目录下的Include文件夹拷贝至您的项目中即可使用。如果使用CMake编译，则可直接`include_directories(Include)`，也可以模仿本项目的CMakeLists.txt进行编写。  
 建立该库的目的是为了提供一个更好用的C++跨平台浏览器控制库，并且尽量使得API通俗易懂，抛弃晦涩难懂的语法，零上手难度。  
 该库仅使用C++标准库及操作系统标准接口，无任何第三方依赖。  
-本项目API参考了Python中webbrowser库的部分设计。
+本项目API参考了Python中 [webbrowser](https://docs.python.org/zh-cn/3/library/mimetypes.html) 库的部分设计。
 
 ## 例子
 ```c++
