@@ -2,11 +2,11 @@
 
 [简体中文](./README.md) | English
 
-这是一个基于C++17的唯头文件跨平台浏览器控制库。  
-您只需要将本目录下的Include文件夹拷贝至您的项目中即可使用。如果使用CMake编译，则可直接`include_directories(Include)`，也可以模仿本项目的CMakeLists.txt进行编写。  
-建立该库的目的是为了提供一个更好用的C++跨平台浏览器控制库，并且尽量使得API通俗易懂，抛弃晦涩难懂的语法，零上手难度。  
-该库仅使用C++标准库及操作系统标准接口，无任何第三方依赖。  
-本项目API参考了Python中webbrowser库的部分设计。
+This is a cross-platform header-only web browser control library base on C++17.   
+You only need to copy the `Include` directory to your project for using it. Just write `include_directories(Include)` if you build with CMake. You can also imitate the CMakeLists.txt of this project.  
+The purpose of establishing this library is to provide a better C++ cross-platform browser control library. I try to make the API easy to understand, abandon the obscure and difficult syntax, let it with zero getting started difficulty.  
+The library is built with only C++ standard library and OS standard interfaces, without any third-party dependencies.  
+The API refers to part of the design of the [webbrowser](https://docs.python.org/3/library/mimetypes.html) library in Python.
 
 ## 例子
 ```c++
