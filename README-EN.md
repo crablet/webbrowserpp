@@ -37,7 +37,7 @@ int main()
 }
 ```
 
-## 支持情况
+## Support
 
 |       |Firefox|Chrome|Edge|Opera|Konqueror|Safari| IE |
 |:-----:|:-----:|:----:|:--:|:---:|:-------:|:----:|:--:|
@@ -45,4 +45,4 @@ int main()
 |Windows|√      |√     |√   |√    |○        |○     |√   |
 |MacOS  |√      |√     |√   |√    |○        |√     |○   |
 
-注：已支持为√，未支持为×，该平台不存在该浏览器为○。
+Note: √ for supported, × for not supported, ○ for browser not exists on that platform
