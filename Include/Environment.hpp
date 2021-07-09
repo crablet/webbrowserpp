@@ -63,6 +63,8 @@ enum class Platform
     using Firefox = FirefoxWindows;
 #include "Browsers/Windows/ChromeWindows.hpp"
     using Chrome = ChromeWindows;
+#include "Browsers/Windows/ChromiumWindows.hpp"
+    using Chromium = ChromiumWindows;
 #include "Browsers/Windows/EdgeWindows.hpp"
     using Edge = EdgeWindows;
 #include "Browsers/Windows/OperaWindows.hpp"
