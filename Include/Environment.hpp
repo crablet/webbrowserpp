@@ -33,6 +33,8 @@ enum class Platform
     using Firefox = FirefoxLinux;
 #include "Browsers/Linux/ChromeLinux.hpp"
     using Chrome = ChromeLinux;
+#include "Browsers/Linux/ChromiumMacOS.h"
+    using Chromium = ChromiumMacOS;
 #include "Browsers/Linux/OperaLinux.hpp"
     using Opera = OperaLinux;
 #include "Browsers/Linux/EdgeLinux.hpp"
