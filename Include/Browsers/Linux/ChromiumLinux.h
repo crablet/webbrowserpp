@@ -8,13 +8,13 @@
 
 #include "Browsers/BaseBrowser.hpp"
 
-class ChromeLinux : public BaseBrowser
+class ChromiumLinux : public BaseBrowser
 {
 protected:
     bool OpenImpl(const std::string &url, Behaviour behaviour, bool autoRaise) override;
 };
 
-bool ChromeLinux::OpenImpl(const std::string &url, Behaviour behaviour, bool autoRaise)
+bool ChromiumLinux::OpenImpl(const std::string &url, Behaviour behaviour, bool autoRaise)
 {
     const std::string tabOrWindow = behaviour == Behaviour::NewTab ? " " : "--new-window ";
     const std::string command = std::string("chromium-browser ") + tabOrWindow + url + '&';
