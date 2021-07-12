@@ -80,6 +80,7 @@ void WebBrowser::RegisterStandardBrowsers()
     Register(Browser::Default);
     Register(Browser::Firefox);
     Register(Browser::Chrome);
+    Register(Browser::Chromium);
     Register(Browser::Edge);
     Register(Browser::Opera);
     Register(Browser::IE);
