@@ -84,10 +84,7 @@ void WebBrowser::RegisterStandardBrowsers()
     Register(Browser::Opera);
     Register(Browser::IE);
 #else
-    Register(Browser::Default);
-    Register(Browser::Firefox);
-    Register(Browser::Chrome);
-    Register(Browser::Opera);
+    #error Sorry, WebBrowser++ is temporarily not working on your OS.
 #endif
 }
 
